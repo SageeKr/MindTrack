@@ -1,0 +1,33 @@
+.patientCard {
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .patientCardSubtitle {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .patientCardTitle {
+    margin-top: 8px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .patientCardInfo {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  
+  .patientCardSymptoms {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .patientCardSymptoms li {
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: #555;
+  }
+  

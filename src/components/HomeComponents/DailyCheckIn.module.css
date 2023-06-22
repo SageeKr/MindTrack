@@ -1,0 +1,57 @@
+.listPhoto {
+  border-radius: 50%;
+  width: 50%; /* Adjust the width as needed */
+  height: 55%; /* Adjust the height as needed */
+  object-fit: cover;
+  overflow: hidden;
+
+}
+
+/* .imageContainer {
+    margin: 0.5rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  } */
+  .DailyCheckBtn{
+    margin: 1.5rem 0 0 0;
+    color: blue;
+    --background: transparent;
+    background-color: transparent;
+    border-top: 1px solid gray;
+    border-radius: 4px;
+    /* padding: 8px 16px; */
+  }
+  .SubTitle
+  {
+    margin-top:0.5rem;
+    font-size: 16px;
+  }
+  .card
+  {
+    /* background-color: ; */
+  }
+  .card {
+    /* Add any card styles you may have */
+  }
+  
+  .SubTitle {
+    /* Add any subtitle styles you may have */
+  }
+  
+  .checkInRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .iconContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    margin-left: 0.5rem;
+  }
+  
