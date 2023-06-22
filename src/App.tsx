@@ -1,35 +1,98 @@
-import React from 'react';
-import { IonApp, IonRouterOutlet, IonTabBar, IonTabButton, IonIcon, IonLabel, setupIonicReact, IonTabs } from '@ionic/react';
+//  React hook imports
+import { useEffect } from 'react';
 
-/* Core CSS required for Ionic components to work properly */
-import '@ionic/react/css/core.css';
+// Dependency imports
+import { Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
-/* Basic CSS for apps built with Ionic */
-import '@ionic/react/css/normalize.css';
-import '@ionic/react/css/structure.css';
-import '@ionic/react/css/typography.css';
+// MUI imports (Material-UI)
+import { styled } from '@mui/material/styles';
 
-/* Optional CSS utils that can be commented out */
-import '@ionic/react/css/padding.css';
-import '@ionic/react/css/float-elements.css';
-import '@ionic/react/css/text-alignment.css';
-import '@ionic/react/css/text-transformation.css';
-import '@ionic/react/css/flex-utils.css';
-import '@ionic/react/css/display.css';
+// Local permission routes
+import { ProtectedRoute, PublicRoute } from './routes/Routes';
 
-/* Theme variables */
-import './theme/variables.css';
-import Login from './pages/Login';
-import SideMenu from './components/ui/SideMenu';
-import ReactRouter from './components/ui/ReactRouter';
+// Page and component imports
+import { Header } from './components/Header';
+import { Home } from './pages/Home';
+import { Login } from './components/Login';
+import { Dashboard } from './pages/Dashboard';
 
-setupIonicReact();
-const App: React.FC = () => (
-  <IonApp>
-    <>
-    <SideMenu></SideMenu>
-    <ReactRouter></ReactRouter>
-    </>
-  </IonApp>
-);
+// Global State imports
+import { useGlobalContext } from './context/Store';
+import { types } from './context/actions';
+
+// Utility imports
+import { readUserPersistence } from './utils/localStorage';
+import { toast } from './utils/toast';
+
+// CSS imports
+import './App.css';
+
+// Custom styled container for hero banner
+const StyledHero = styled('div')(() => ({
+  background:
+    'url(https://res.cloudinary.com/file-upload-multer-cloudinary/image/upload/v1637773737/t-r-photography-TzjMd7i5WQI-unsplash_hwvycx.jpg)',
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  minHeight: '11rem',
+  opacity: 0.92,
+}));
+
+const App = () => {
+  // Snapshot of the global state
+  const {
+    state: { loggedIn },
+    dispatch,
+  } = useGlobalContext();
+
+  // Side effect that loads and updates global state with previously
+  // logged in user
+  useEffect(() => {
+    const user = readUserPersistence();
+    delete user.password;
+    Object.keys(user).length && dispatch({ type: types.ME, payload: user });
+    Object.keys(user).length && toast('Already logged in!', 600);
+  }, [dispatch]);
+
+  return (
+    <div className="App">
+      <Header />
+      <StyledHero />
+      {/* Centered toast informational alert for user feedback */}
+      <ToastContainer />
+      <main>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              // Anyone can access the Home page
+              <PublicRoute>
+                <Home />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              // Anyone can access the Login page
+              <PublicRoute auth={loggedIn} restricted={true}>
+                <Login />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="/dashboard"
+            element={
+              // Only logged  in users can access Dashboard view
+              <ProtectedRoute auth={loggedIn}>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </main>
+    </div>
+  );
+};
+
 export default App;

@@ -1,0 +1,34 @@
+.App {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  margin: 1rem;
+  min-height: calc(100vh - 120px);
+}
+
+main > * {
+  margin-bottom: 1rem;
+}
+
+picture > * {
+  width: 100%;
+}
+
+.MuiDataGrid-row {
+  padding: 0.3rem 0;
+}
+
+.Toastify__progress-bar--info {
+  background: rgb(28, 110, 164) !important;
+}
+
+.Toastify__toast--error {
+  background: rgb(240, 181, 171) !important;
+  color: white;
+}

@@ -2,10 +2,10 @@
 import { StyledBox } from '../components/Box';
 import { DataTable } from '../components/table/DataTable';
 
-export const Home = () => {
+export const Dashboard = () => {
   return (
     <>
-      <div>Pets Available</div>
+      <div>Inventory</div>
       <StyledBox>
         <DataTable />
       </StyledBox>
