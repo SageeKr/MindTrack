@@ -1,34 +1,65 @@
 .App {
-  text-align: center;
+  background-color: whitesmoke;
+  height: 100vh;
+  place-items: center;
+  display: grid;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+.App-body {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  place-items: center;
+  height: 93%;
+  width: 90%;
+  box-shadow: -1px 4px 20px -6px rgba(0,0,0,0.75);
 }
 
-main {
-  margin: 1rem;
-  min-height: calc(100vh - 120px);
+.App-header {
+display: flex;
+}
+.App-logo {
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
-main > * {
-  margin-bottom: 1rem;
+.App-name {
+  max-width: 300px;
+
 }
 
-picture > * {
-  width: 100%;
+/*.App-header {*/
+/*  background-color: #282c34;*/
+/*  min-height: 100vh;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  font-size: calc(10px + 2vmin);*/
+/*  color: white;*/
+/*}*/
+
+.App-link {
+  color: #61dafb;
 }
 
-.MuiDataGrid-row {
-  padding: 0.3rem 0;
-}
 
-.Toastify__progress-bar--info {
-  background: rgb(28, 110, 164) !important;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 30s linear;
+  }
 }
-
-.Toastify__toast--error {
-  background: rgb(240, 181, 171) !important;
-  color: white;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(120deg);
+  }
+  from {
+    transform: rotate(-120deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

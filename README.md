@@ -1,80 +1,70 @@
-# Jackson's Pet Store
+# Getting Started with Create React App
 
-A pet store app that allows for public viewing of pets available and sold, as well as authentication for customer buying and admin marking sold and polling for sold pets.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+## Available Scripts
 
-https://user-images.githubusercontent.com/36890724/143811676-a2327507-3dcb-46b9-abd5-a8e1bbe8f860.mp4
+In the project directory, you can run:
 
-## Prerequisites
+### `npm start`
 
-<a href="https://nodejs.org/en/"><img width=80 height=80 src="./logo.svg"></a>
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-* Node >=14.x
-* Yarn >=1.x
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Technologies
+### `npm test`
 
-![node](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+### `npm run build`
 
-![TS](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-![Material-UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Installation
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-If you do not have Yarn installed:
+### `npm run eject`
 
-**Install via npm** 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-It is recommended to install Yarn through the npm package manager, which comes bundled with Node.js when you install it on your system.
-Once you have npm installed you can run the following both to install and upgrade Yarn:
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-```bash
-npm install --global yarn
-```
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-* Clone the repo
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-```bash
-yarn install
-```
-
-Alternatively, you can delete the `package-lock.json` file and run the same commands with `npm`
-
-## Usage
-  
-```bash
-yarn start
-```
-
-- Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-- The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-## Running Tests
-
-```bash
-yarn test
-```
-
-## Deployment
-
-[Azure via DevOps](https://pet-store-hca.azurewebsites.net)
-
-## Authors
-
-[Jon Jackson](http://github.com/ocskier)
-
-## License
-
-[License](LICENSE)
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
