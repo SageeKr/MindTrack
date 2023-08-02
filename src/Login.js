@@ -1,19 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Login.css";
 
-export default function Login({isLogin}) {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-
+export default function Login({isLoggedIn}) {
     return (
         <div className="login">
             <div className="form">
-                <form className="login-form">
+                <div className="login-form">
                     <input type="text" placeholder="username"/>
                     <input type="password" placeholder="password"/>
-                    <button onClick={isLogin}>login</button>
+                    {/* eslint-disable-next-line no-unused-expressions */}
+                    <button onClick={() =>{isLoggedIn()}}>login</button>
                     <p className="message">Not registered? <a href="#">Create an account</a></p>
-                </form>
+                </div>
             </div>
         </div>
     );

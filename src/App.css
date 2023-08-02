@@ -63,3 +63,8 @@ display: flex;
     transform: rotate(360deg);
   }
 }
+.ChoosingDiv
+{
+  display: flex;
+  flex-direction: row;
+}

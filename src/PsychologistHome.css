@@ -1,0 +1,58 @@
+.patient-card {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .patient-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  
+  .patient-card p {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  
+  .patient-card p:last-child {
+    margin-bottom: 0;
+  }
+  .profile-paitents
+  {
+    display: inline-block;
+    width: 15%;
+    height: 15%;
+  }
+  .patient-card {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .patient-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .patient-photo {
+    margin-right: 16px;
+  }
+  
+  .profile-patients {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .patient-details {
+    margin-left: auto;
+  }
+  .grapthAd
+  {
+    margin-top: 5px;
+    width: 300px;
+  }
